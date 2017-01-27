@@ -1,0 +1,6 @@
+**/*
+
+!dist/i/*.*
+!dist/**/*.*
+!.gitignore
+!.nojekyll
