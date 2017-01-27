@@ -1,0 +1,11 @@
+{
+  "name": "sir-mails",
+  "devDependencies": {
+    "borschik": "^1.6.1",
+    "inline-css": "^2.2.2",
+    "minimize": "^2.0.0"
+  },
+  "scripts": {
+    "build-dist": "node build.js"
+  }
+}

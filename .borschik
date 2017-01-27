@@ -1,0 +1,8 @@
+{
+    "paths" : {
+        "./dist/i/": "https://aliosv.github.io/sir-mails/dist/i/"
+    },
+    "freeze_paths" : {
+        "**/*.png": "dist/i"
+    }
+}

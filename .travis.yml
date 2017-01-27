@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "4.2.4"
+env:
+  - YENV=production
+install:
+  - npm install
+  - npm run build-dist
+after_success: |
+  if [ -n "$GITHUB_API_KEY" ]; then
+    cd "$TRAVIS_BUILD_DIR"
+
+    git clone --single-branch -b gh-pages https://github.com/aliosv/sir-mails.git
+    rm -rf sir-mails/dist
+    cp -r dist sir-mails
+
+    cd sir-mails
+    git add dist -f
+
+    git -c user.name='travis' -c user.email='travis' commit -m $TRAVIS_COMMIT
+    # Make sure to make the output quiet, or else the API token will leak!
+    # This works because the API key can replace your password.
+    git push -f -q https://aliosv:$GITHUB_API_KEY@github.com/aliosv/sir-mails gh-pages
+    cd "$TRAVIS_BUILD_DIR"
+  fi
