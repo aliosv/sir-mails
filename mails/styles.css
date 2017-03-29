@@ -12,6 +12,8 @@ body {
     padding: 8px;
     margin: auto;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    line-height: 16px;
 }
 
 .blank__header {
@@ -62,7 +64,6 @@ body {
 }
 
 .link {
-    font-size: 13px;
     font-weight: 500;
     color: #5a78a6;
     text-decoration: none;
