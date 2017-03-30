@@ -6,5 +6,7 @@
 !.gitignore
 !.travis.yml
 !build.js
+!example.js
+!index.js
 !package.json
 !README.md
