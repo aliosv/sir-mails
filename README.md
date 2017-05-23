@@ -1,3 +1,4 @@
+- [Общий шаблон](//aliosv.github.io/sir-mails/dist/common.html)
 - [Приглашение в компанию](//aliosv.github.io/sir-mails/dist/companyInvite.html)
 - [Подтверждение почты](//aliosv.github.io/sir-mails/dist/confirmEmail.html)
 - [Пароль изменен](//aliosv.github.io/sir-mails/dist/passwordChanged.html)

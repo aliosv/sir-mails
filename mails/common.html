@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="blank">
+        <div class="blank__header">
+            <img src="../i/logo-black.png"/>
+        </div>
+        <div class="blank__body">
+            <div class="blank__title"><%= data.title %></div>
+            <%= data.body %>
+            <% if(data.button && data.button.url && data.button.text) {%>
+                <a href="<%= data.button.url %>" class="button"><%= data.button.text %></a>
+            <%} %>
+        </div>
+    </div>
+    <div class="contacts">
+        © Buildvisor 2017
+    </div>
+</body>
+</html>
