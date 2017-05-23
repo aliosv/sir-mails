@@ -4,7 +4,7 @@ var ejs = require('ejs'),
     minimize = new Minimize();
 
 module.exports = function(data, cb) {
-    ejs.renderFile('./mails/_template.html', data, function(err, html) {
+    ejs.renderFile('./mails/_template.html', { data : data }, function(err, html) {
         if(err) return cb(err);
 
         inlineCss(
