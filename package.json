@@ -10,6 +10,6 @@
     "minimize": "^2.0.0"
   },
   "scripts": {
-    "build-dist": "node build.js"
+    "postinstall": "node build.js"
   }
 }

@@ -4,12 +4,14 @@ var ejs = require('ejs'),
     minimize = new Minimize();
 
 module.exports = function(data, cb) {
-    ejs.renderFile('./mails/_template.html', { data : data }, function(err, html) {
+    var template = (data && data.type || 'common') + '.html';
+
+    ejs.renderFile('./dist/' + template, { data : data }, function(err, html) {
         if(err) return cb(err);
 
         inlineCss(
             html,
-            { url : 'file://' + require('path').join(process.cwd(), 'mails', '_template.html') }
+            { url : 'file://' + require('path').join(process.cwd(), 'dist', template) }
         ).then(function(styledHtml) {
                 minimize.parse(styledHtml, function(error, minimizedHtml) {
                     if(error) return cb(error);
