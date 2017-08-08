@@ -10,11 +10,12 @@ after_success: |
     cd "$TRAVIS_BUILD_DIR"
 
     git clone --single-branch -b gh-pages https://github.com/aliosv/sir-mails.git
-    rm -rf sir-mails/dist
-    cp -r dist sir-mails
 
     cd sir-mails
-    git add dist -f
+    git reset --hard `git rev-list --max-parents=0 HEAD`
+    rm -rf dist
+    cp -r ../dist .
+    git add -f dist
 
     git -c user.name='travis' -c user.email='travis' commit -m $TRAVIS_COMMIT
     # Make sure to make the output quiet, or else the API token will leak!

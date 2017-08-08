@@ -3,7 +3,9 @@
         "./dist/i/": "https://aliosv.github.io/sir-mails/dist/i/"
     },
     "freeze_paths" : {
+        "**/*.jpg": "dist/i",
         "**/*.png": "dist/i",
+        "**/*.svg": "dist/i",
         "**/*.css": "dist"
     }
 }

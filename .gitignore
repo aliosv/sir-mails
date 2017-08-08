@@ -1,6 +1,7 @@
 **/*
 
 !i/*.*
+!i/promo/*.*
 !mails/*.*
 !.borschik
 !.gitignore
