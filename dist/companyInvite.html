@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext">
+    <link rel="stylesheet" type="text/css" href="../dist/eaeq1pYy-nCStWSN1NRDoDFAwTU.css">
+</head>
+<body>
+    <div class="blank">
+        <div class="blank__header">
+            <img src="https://aliosv.github.io/sir-mails/dist/i/egHr7kYxJeQNDdS2Qmfw5XJ91gY.png"/>
+        </div>
+        <div class="blank__body">
+            <div class="blank__title">Вы приглашены в команду компании <%= data.companyName %></div>
+            <div><%= data.referrerFullName %> пригласил вас присоединиться к команде компании  «<%= data.companyName %>» на
+                сервисе Buildvisor.<br/>Чтобы присоединиться к команде компании, нажмите на кнопку ниже.</div>
+            <a href="<%= data.joinCompanyUrl %>" class="button">Присоединиться к команде</a>
+            <div>Если вы получили это письмо по ошибке, просто проигнорируйте его.</div>
+        </div>
+    </div>
+    <div class="contacts">
+        © Buildvisor 2017
+    </div>
+</body>
+</html>
